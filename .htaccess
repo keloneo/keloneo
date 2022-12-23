@@ -1,0 +1,7 @@
+ErrorDocument 404 /404.html
+
+Options -Indexes
+
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^example.com [NC]
+RewriteRule ^(.*)$ http://www.example.com/$1 [L,R=301]
